@@ -33,5 +33,5 @@ const slowCars = newCars.filter(function(car) {
     }
 });
 
-
+console.log("Cars with speed between 230 and 260");
 console.log(slowCars);
