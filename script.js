@@ -23,7 +23,7 @@ for (i = 0; i < 10; i++) {
 console.log(newCars);
 
 
-const fastCars = newCars.filter(function(car) {
+const slowCars = newCars.filter(function(car) {
     // This function is called for every car in the cars array
     if (car.speed >= 230 && car.speed <= 260) {
         // save the car
@@ -35,4 +35,4 @@ const fastCars = newCars.filter(function(car) {
 });
 
 
-console.log(fastCars);
+console.log(slowCars);
