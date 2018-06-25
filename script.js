@@ -9,7 +9,7 @@ var speed = [301, 278, 233, 257, 260, 245,225];
 //https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
 this.make = make[Math.floor(Math.random()*make.length)];
 this.color = color[Math.floor(Math.random()*color.length)];
-this.speed = Math.floor(Math.random() * 57) + 225;
+this.speed = Math.floor(Math.random() * 77) + 225;
 //https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 
 }
