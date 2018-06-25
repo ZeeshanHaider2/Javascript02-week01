@@ -29,7 +29,7 @@ const fastCars = newCars.filter(function(car) {
         // save the car
         return true;
     } else {
-        // filter out the cars that are slower than 60
+        // filter out the cars that are slower than 230 and faster than 260
         return false;
     }
 });
