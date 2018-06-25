@@ -4,7 +4,7 @@ var make = ["Tesla Roadster","Bugatti Chiron","Lamborghini Aventador S","Koenigs
 
 var color = ["Black", "Red","light yellow","white","grey"];
 
-
+//https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
 //https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
 this.make = make[Math.floor(Math.random()*make.length)];
 this.color = color[Math.floor(Math.random()*color.length)];
