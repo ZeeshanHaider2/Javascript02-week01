@@ -4,7 +4,6 @@ var make = ["Tesla Roadster","Bugatti Chiron","Lamborghini Aventador S","Koenigs
 
 var color = ["Black", "Red","light yellow","white","grey"];
 
-var speed = [301, 278, 233, 257, 260, 245,225];
 
 //https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
 this.make = make[Math.floor(Math.random()*make.length)];
