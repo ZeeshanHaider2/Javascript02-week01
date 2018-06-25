@@ -1,7 +1,5 @@
 function Car (make , color, speed ){ 
 
-
-
 //https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
 //https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
 this.make = make[Math.floor(Math.random()*make.length)];
@@ -31,5 +29,5 @@ const slowCars = newCars.filter(function(car) {
     }
 });
 
-
+console.log("Cars with speed between 230 and 260")
 console.log(slowCars);
