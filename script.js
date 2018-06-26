@@ -40,14 +40,9 @@ console.log("Cars with speed between 230 and 260");
 console.log(slowCars);
 
 
-const notLightYellow = newCars.filter(function(car){
-
-    if (car.color === "lightYellow"){
-        return false;
-    }else{
-        return true;
-    }
-})
+let notLightYellowCars = newCars.filter(function(car){
+    return car.color !== 'lightyellow'}).map(function(car)
+     { return car.make});
 
 console.log("Cars which are NOT lightYellow");
-console.log(notLightYellow);
+console.log(notLightYellowCars);
