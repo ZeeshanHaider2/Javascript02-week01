@@ -1,48 +1,41 @@
-function Car (make , color, speed ){ 
 
-
-var make = ["Tesla Roadster","Bugatti Chiron","Lamborghini Aventador S","Koenigsegg Agera RS","Aston Martin Valkyrie", "Koenigsegg CCR","Ferrari 812 Superfast"];
-    
-    
-    
-var color = ["black", "red","lightYellow","white","grey"];
-
-//https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
-//https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-this.make = make[Math.floor(Math.random()*make.length)];
-this.color = color[Math.floor(Math.random()*color.length)];
-this.speed = Math.floor(Math.random() * 77) + 225;
-//https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
-
+/**
+ * Get random integer between two numbers, found here: https://stackoverflow.com/a/7228322
+ * @param {integer} min - The min number
+ * @param {integer} max - The max number
+ * @returns {Number} Random number between min and max
+ */
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 
-let newCars = [];
-for (i = 0; i < 10; i++) {
-    newCars[i] = new Car ("","","");
-}
+/**
+ * Get an array with car objects with random color and speed
+ * @param {integer} numberOfCars - The number of cars 
+ * @returns {array} Array containing the car objects
+ */
+function generateCars(numberOfCars) {
+    const cars = [];
 
-console.log(newCars);
+    const carMakes = ['Honda', 'BMW','Fiat','Skoda','Volvo'];
+    const carColors = ['lightgrey', 'lightcyan','lightyellow','lightgreen','lightcoral','lightpink'];
+    
+    for (let i = 0; i < numberOfCars; i++) {
+        const car = {};
+        const randomMakeIndex = randomIntFromInterval(0, carMakes.length - 1);
+        const randomColorIndex = randomIntFromInterval(0, carColors.length - 1);
 
+        car.make = carMakes[randomMakeIndex];
+        car.color = carColors[randomColorIndex];
+        car.speed = randomIntFromInterval(0, 100);
 
-const slowCars = newCars.filter(function(car) {
-    // This function is called for every car in the cars array
-    if (car.speed >= 230 && car.speed <= 260) {
-        // save the car
-        return true;
-    } else {
-        // filter out the cars that are slower than 230 and faster than 260
-        return false;
+        cars.push(car);
     }
-});
 
-console.log("Cars with speed between 230 and 260");
-console.log(slowCars);
+    return cars;
+}
 
 
-let notLightYellowCars = newCars.filter(function(car){
-    return car.color !== 'lightyellow'}).map(function(car)
-     { return car.make});
+console.log(generateCars(10));
 
-console.log("Cars which are NOT lightYellow");
-console.log(notLightYellowCars);
