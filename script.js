@@ -5,7 +5,7 @@ var make = ["Tesla Roadster","Bugatti Chiron","Lamborghini Aventador S","Koenigs
     
     
     
-var color = ["Black", "Red","light yellow","white","grey"];
+var color = ["black", "red","lightYellow","white","grey"];
 
 //https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
 //https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
@@ -38,3 +38,16 @@ const slowCars = newCars.filter(function(car) {
 
 console.log("Cars with speed between 230 and 260");
 console.log(slowCars);
+
+
+const notLightYellow = newCars.filter(function(car){
+
+    if (car.color === "lightYellow"){
+        return false;
+    }else{
+        return true;
+    }
+})
+
+console.log("Cars which are NOT lightYellow");
+console.log(notLightYellow);
